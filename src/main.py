@@ -26,7 +26,7 @@ sys.path
 sys.path.append('/app/confignlp/src')
 print(sys.path)
 
-st.markdown(Path(os.path.join(os.getcwd(), "file.md")).read_text(), unsafe_allow_html=True)
+st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsafe_allow_html=True)
 
 if "models" not in st.session_state:
     question_name = "deepset/roberta-base-squad2"
@@ -61,7 +61,7 @@ def read_data(filename: str) -> dict:
 
 
 if "data" not in st.session_state:
-    st.session_state["data"] = read_data("data.json")
+    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "src" , "data.json"))
     st.session_state["data_names"] = {}
     for key in st.session_state["data"].keys():
         names = []
