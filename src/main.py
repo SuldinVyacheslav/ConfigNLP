@@ -22,7 +22,6 @@ st.set_page_config(
     },
 )
 
-sys.path
 sys.path.append('/app/confignlp/src')
 st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsafe_allow_html=True)
 
