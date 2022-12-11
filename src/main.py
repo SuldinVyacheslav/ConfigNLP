@@ -26,24 +26,25 @@ sys.path.append('/app/confignlp/src')
 st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsafe_allow_html=True)
 
 if "models" not in st.session_state:
-    question_name = "deepset/roberta-base-squad2"
-    question = pipeline(
-        "question-answering", model=question_name, tokenizer=question_name
-    )
-
-    classifier_name = "joeddav/xlm-roberta-large-xnli"
-    classifier = pipeline("zero-shot-classification", model=classifier_name)
-
-    translation_name = "Helsinki-NLP/opus-mt-ru-en"
-    translation = pipeline(
-        "translation", model=translation_name, tokenizer=translation_name
-    )
-
-    st.session_state["models"] = {
-        "translation_model": translation,
-        "classifier_model": classifier,
-        "q_a_model": question,
-    }
+    pass
+    # question_name = "deepset/roberta-base-squad2"
+    # question = pipeline(
+    #     "question-answering", model=question_name, tokenizer=question_name
+    # )
+    #
+    # classifier_name = "joeddav/xlm-roberta-large-xnli"
+    # classifier = pipeline("zero-shot-classification", model=classifier_name)
+    #
+    # translation_name = "Helsinki-NLP/opus-mt-ru-en"
+    # translation = pipeline(
+    #     "translation", model=translation_name, tokenizer=translation_name
+    # )
+    #
+    # st.session_state["models"] = {
+    #     "translation_model": translation,
+    #     "classifier_model": classifier,
+    #     "q_a_model": question,
+    # }
 
 
 if "configs" not in st.session_state:
