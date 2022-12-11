@@ -53,4 +53,4 @@ jobs:
           pipenv install --deploy --dev
       - name: Test with pytest
         run: |
-          pipenv run coverage run
+          pytest
