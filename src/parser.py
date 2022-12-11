@@ -128,7 +128,7 @@ def parse_info(
     if soup is None:
         return None
 
-    subject.image =  soup.find(
+    subject.image = soup.find(
         "img",
         class_="ProductPageStickyGallery-gallery__image-upper PreviewList__image Image",
     )["src"]
