@@ -39,7 +39,6 @@ jobs:
           python-version: 3.9
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install flake8 pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip instal transformers[sentencepiece]
