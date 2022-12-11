@@ -6,9 +6,7 @@ from pathlib import Path
 from transformers import pipeline
 
 import sys
-sys.path
-sys.path.append('/app/confignlp/src')
-print(sys.path)
+
 
 st.set_page_config(
     page_title="MyConfig",
@@ -22,7 +20,9 @@ st.set_page_config(
     },
 )
 
-
+sys.path
+sys.path.append('/app/confignlp/src')
+print(sys.path)
 st.markdown(Path("file.md").read_text(), unsafe_allow_html=True)
 
 if "models" not in st.session_state:
