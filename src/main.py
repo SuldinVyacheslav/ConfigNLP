@@ -1,9 +1,13 @@
 import json
-from parser import parse_info, get_soup
+from src.parser import parse_info, get_soup
 import streamlit as st
 import configuration as cf
 from pathlib import Path
 from transformers import pipeline
+import sys
+sys.path
+sys.path.append('/app/confignlp/src')
+
 
 st.set_page_config(
     page_title="MyConfig",
