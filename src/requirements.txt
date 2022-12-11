@@ -113,7 +113,7 @@ toml==0.10.2
 tomli==2.0.1
 tomlkit==0.11.5
 toolz==0.12.0
-torch @ file:///home/jennsy/Downloads/torch-1.12.1%2Bcu102-cp310-cp310-linux_x86_64.whl
+torch==1.12.1
 tornado==6.2
 tqdm==4.64.1
 transformers==4.25.1
