@@ -19,27 +19,35 @@ and check if they match.
 <br>Then you finish - you will get all links of components.  
 <br>Good luck and congratulations with you new PC 🥳!
 
-img[alt=drawing.] { width: 100px; }
 
 ## Step-by-step
-0. Follow the **link** to open application [MyConfig](https://suldinvyacheslav-confignlp-srcmain-test-yh6plk.streamlit.app/)
-<img align="right" src="https://i.ibb.co/z5cr5sp/button.png" width="200"><br>
-<img  align="right" src="https://i.ibb.co/10cs7xw/select.png"  width="300" ><br>
-<img  align="right" src="https://i.ibb.co/FbxXrW5/tab.png"  width="300"><br>
-<img align="right" src="https://i.ibb.co/QnNXbV5/cost.png"  width="300"><br>
-<br><img  src="https://i.ibb.co/B22qKhX/permission.png" width="300" ><br>
-1. Using *button* create **New configuration**.  
-2. Now go to *sidebar* and choose **PC component**.  
-3. Wait for information...  
-4. Wait more...  
-5. Fine! It received **information** about the selected element.  
-6. Go to *tabs* and analyse it's **characteristics** and **view**!  
-7. Now add more! But be careful of **compatibilities**: solve errors if they appears!  
-8. And look at the **price** of the selected items!  
+| Step                                                                                | image                                                                        |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Using *button* create **New configuration**                                         | <img align="center" src="https://i.ibb.co/z5cr5sp/button.png" width="300">    |
+| Now go to *sidebar* and choose **PC component**<br>Wait for information...          | <img  align="center" src="https://i.ibb.co/10cs7xw/select.png"  width="300" > |
+| Fine! It received **information** about the selected element.                       |   |
+| Go to *tabs* and analyse it's **characteristics** and **view**                      |  <img align="center" src="https://i.ibb.co/FbxXrW5/tab.png"  width="300">                                                                            |
+| Now add more! But be careful of **compatibilities**: solve errors if they appears!  |                                                                              |
+| And look at the **price** of the selected items!                                    | <img align="center" src="https://i.ibb.co/QnNXbV5/cost.png"  width="300">     |
+
 
 
 ## Don't forget
 
-If you will select components to othen, server must respond with 429 (Too many requests error)... Be rational!
+If you will select components to othen, server must respond with 429 (Too many requests error)... Be rational!  
+ <p align="center">
+      <img src="https://i.ibb.co/B22qKhX/permission.png" width="706">
+</p>
 
-<br>
+Have fun!
+
+<h1 style="text-align: center;">Contibute</h1>  
+
+```git clone https://github.com/SuldinVyacheslav/ConfigNLP.git```  
+```python -m pip install --upgrade pip```  
+```pip install -r requirement.txt```  
+```streamlit src/main.py```  
+
+<h1 style="text-align: center;">License</h1>  
+  
+Source code of this repository is released under the [Apache-2.0 license](https://choosealicense.com/licenses/apache-2.0/)
