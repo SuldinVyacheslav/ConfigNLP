@@ -1,9 +1,14 @@
 import json
+import os
+
 from parser import parse_info, get_soup
 import streamlit as st
 import configuration as cf
 from pathlib import Path
 from transformers import pipeline
+
+import sys
+
 
 st.set_page_config(
     page_title="MyConfig",
@@ -17,18 +22,19 @@ st.set_page_config(
     },
 )
 
-
-st.markdown(Path("file.md").read_text(), unsafe_allow_html=True)
+sys.path.append('/app/confignlp/src')
+st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsafe_allow_html=True)
 
 if "models" not in st.session_state:
+    pass
     question_name = "deepset/roberta-base-squad2"
     question = pipeline(
         "question-answering", model=question_name, tokenizer=question_name
     )
 
-    classifier_name = "joeddav/xlm-roberta-large-xnli"
-    classifier = pipeline("zero-shot-classification", model=classifier_name)
-
+    # classifier_name = "joeddav/xlm-roberta-large-xnli"
+    # classifier = pipeline("zero-shot-classification", model=classifier_name)
+    #
     translation_name = "Helsinki-NLP/opus-mt-ru-en"
     translation = pipeline(
         "translation", model=translation_name, tokenizer=translation_name
@@ -36,7 +42,6 @@ if "models" not in st.session_state:
 
     st.session_state["models"] = {
         "translation_model": translation,
-        "classifier_model": classifier,
         "q_a_model": question,
     }
 
@@ -53,7 +58,7 @@ def read_data(filename: str) -> dict:
 
 
 if "data" not in st.session_state:
-    st.session_state["data"] = read_data("data.json")
+    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "src" , "data.json"))
     st.session_state["data_names"] = {}
     for key in st.session_state["data"].keys():
         names = []
@@ -186,5 +191,5 @@ if __name__ == "__main__":
     show_all()
 
 
-with open("style.css") as f:
+with open(os.path.join(os.getcwd(), "src" , "style.css")) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
