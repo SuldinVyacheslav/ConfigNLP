@@ -22,8 +22,9 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install mypy
-        python3 -m pip install types-requests
+        python3 -m pip install types-requests==2.28.11
         mypy --install-types
+        pip install transformers[sentencepiece]
     - name: mypy
       run: |
         mypy .
