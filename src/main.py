@@ -1,5 +1,5 @@
 import json
-from src.parser import parse_info, get_soup
+from parser import parse_info, get_soup
 import streamlit as st
 import configuration as cf
 from pathlib import Path
