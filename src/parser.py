@@ -135,13 +135,13 @@ def parse_info(
     # f.close()
     specs = soup.find_all("div", class_="Specifications__row")
     out = ""
-    for al in specs:
+    for spec in specs:
         name = (
-            al.find(class_="Specifications__column Specifications__column_name")
+            spec.find(class_="Specifications__column Specifications__column_name")
             .contents[0]
             .text
         )
-        value = al.find(
+        value = spec.find(
             class_="Specifications__column Specifications__column_value"
         ).text
         out += " ".join((name + value).split()) + ";\n"
