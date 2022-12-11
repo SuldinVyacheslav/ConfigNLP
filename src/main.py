@@ -7,7 +7,7 @@ from transformers import pipeline
 import sys
 sys.path
 sys.path.append('/app/confignlp/src')
-
+print(sys.path)
 
 st.set_page_config(
     page_title="MyConfig",
