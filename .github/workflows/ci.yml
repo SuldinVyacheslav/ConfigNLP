@@ -2,6 +2,7 @@ on: [push, pull_request]
 
 jobs:
   lint:
+  name: Linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,8 +29,9 @@ jobs:
         mypy .
 
   test:
+    name: Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v3
