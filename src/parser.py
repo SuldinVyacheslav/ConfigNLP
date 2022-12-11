@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import typing
 
-import bs4
 import requests as rq
 import json
 from bs4 import BeautifulSoup as bs
@@ -71,10 +70,6 @@ def parce(to_file: str, classifier: pipeline) -> None:
     f.close()
 
 
-# tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-ru-en")
-# model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-ru-en")
-
-
 parser_matrix_qa = {
     cf.MB: {
         cf.CHIPSET: "Какой Чипсет?",
@@ -112,7 +107,7 @@ def get_soup(component: cf.PCComponent) -> bs | None:
     soup = None
     while not mb_price:
         r = rq.get(component.link + "properties/")
-        if r.status_code == 429:
+        if r.status_code != 200:
             return None
         soup = bs(r.text, "html.parser")
         mb_price = soup.find("span", attrs={"itemprop": "price"})
@@ -132,7 +127,6 @@ def parse_info(
         "img",
         class_="ProductPageStickyGallery-gallery__image-upper PreviewList__image Image",
     )["src"]
-    # f.close()
     specs = soup.find_all("div", class_="Specifications__row")
     out = ""
     for spec in specs:

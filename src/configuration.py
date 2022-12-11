@@ -8,20 +8,16 @@ GPU: Final[str] = "Video Card"
 PB: Final[str] = "Power Block"
 BODY: Final[str] = "Body"
 # magic words for main info
-
 CHIPSET: Final[str] = "chipset"
 SOCKET: Final[str] = "socket"
 DDR: Final[str] = "RAMstandart"
 RAM_TYPE: Final[str] = "RAMtype"
 ATX: Final[str] = "atx"
-
 FREQUENCY: Final[str] = "clock"
-
 MEM_TYPE: Final[str] = "mem"
 INTAKE: Final[str] = "heat"
 LENGTH: Final[str] = "len"
 SLOT: Final[str] = "slot"
-
 CPU_SOCKET: Final[str] = "socket"
 HEAT_OUT: Final[str] = "heat"
 
