@@ -27,11 +27,11 @@ st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsa
 
 if "models" not in st.session_state:
     pass
-    # question_name = "deepset/roberta-base-squad2"
-    # question = pipeline(
-    #     "question-answering", model=question_name, tokenizer=question_name
-    # )
-    #
+    question_name = "deepset/roberta-base-squad2"
+    question = pipeline(
+        "question-answering", model=question_name, tokenizer=question_name
+    )
+
     # classifier_name = "joeddav/xlm-roberta-large-xnli"
     # classifier = pipeline("zero-shot-classification", model=classifier_name)
     #
@@ -192,5 +192,5 @@ if __name__ == "__main__":
     show_all()
 
 
-with open("style.css") as f:
+with open(os.path.join(os.getcwd(), "src" , "style.css")) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
