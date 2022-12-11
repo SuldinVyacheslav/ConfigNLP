@@ -1,13 +1,8 @@
-from pprint import pprint
 import sys
-
-# sys.path is a list of absolute path strings
 from os.path import dirname, abspath
 
-pprint(sys.path)
-d = dirname(dirname(abspath(__file__)))
-
-sys.path.append(d)
-pprint(sys.path)
+sys.path.append(dirname(dirname(abspath(__file__))) + "/src")
+import src.parser as ps
+import src.config as cf
 
 import src
