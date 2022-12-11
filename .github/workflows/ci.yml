@@ -31,7 +31,7 @@ jobs:
   test:
     name: Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 322
 
     steps:
       - uses: actions/checkout@v3

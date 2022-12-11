@@ -22,8 +22,11 @@ st.set_page_config(
     },
 )
 
-sys.path.append('/app/confignlp/src')
-st.markdown(Path(os.path.join(os.getcwd(), "src" , "file.md")).read_text(), unsafe_allow_html=True)
+sys.path.append("/app/confignlp/src")
+st.markdown(
+    Path(os.path.join(os.getcwd(), "src", "file.md")).read_text(),
+    unsafe_allow_html=True,
+)
 
 if "models" not in st.session_state:
     pass
@@ -58,7 +61,7 @@ def read_data(filename: str) -> dict:
 
 
 if "data" not in st.session_state:
-    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "src" , "data.json"))
+    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "src", "data.json"))
     st.session_state["data_names"] = {}
     for key in st.session_state["data"].keys():
         names = []
@@ -191,5 +194,5 @@ if __name__ == "__main__":
     show_all()
 
 
-with open(os.path.join(os.getcwd(), "src" , "style.css")) as f:
+with open(os.path.join(os.getcwd(), "src", "style.css")) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

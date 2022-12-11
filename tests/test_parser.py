@@ -36,13 +36,11 @@ test_html = {
 }
 
 question_name = "deepset/roberta-base-squad2"
-classifier_name = "joeddav/xlm-roberta-large-xnli"
 translation_name = "Helsinki-NLP/opus-mt-ru-en"
 models = {
     "translation_model": pipeline(
         "translation", model=translation_name, tokenizer=translation_name
     ),
-    "classifier_model": pipeline("zero-shot-classification", model=classifier_name),
     "q_a_model": pipeline(
         "question-answering", model=question_name, tokenizer=question_name
     ),
