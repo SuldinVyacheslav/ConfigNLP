@@ -41,7 +41,7 @@ jobs:
         run: |
           pip install flake8 pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip instal transformers[sentencepiece]
+          pip install transformers[sentencepiece]
       - name: Test with pytest
         run: |
           cd tests
