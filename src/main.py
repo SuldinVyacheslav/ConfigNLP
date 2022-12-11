@@ -1,4 +1,6 @@
 import json
+import os
+
 from parser import parse_info, get_soup
 import streamlit as st
 import configuration as cf
@@ -23,7 +25,8 @@ st.set_page_config(
 sys.path
 sys.path.append('/app/confignlp/src')
 print(sys.path)
-st.markdown(Path("file.md").read_text(), unsafe_allow_html=True)
+
+st.markdown(Path(os.path.join(os.getcwd(),"file.md")).read_text(), unsafe_allow_html=True)
 
 if "models" not in st.session_state:
     question_name = "deepset/roberta-base-squad2"
