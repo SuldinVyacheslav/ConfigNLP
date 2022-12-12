@@ -36,7 +36,7 @@ class PCComponent:
         self.name = ""
         self.price = 0
         self.link = ""
-        self.is_set = ""
+        self.is_set = False
         self.image = ""
         self.all_info = ""
 

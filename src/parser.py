@@ -190,7 +190,7 @@ def parse_info(
 
 # r = requests.get("https://www.citilink.ru/catalog/materinskie-platy/")
 # print(r.status_code)
-parce("info.json")
+# parce("info.json")
 
 # cmnt = cf.MB
 # dummy = cf.PCComponent(cmnt)

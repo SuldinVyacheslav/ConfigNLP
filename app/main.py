@@ -72,7 +72,7 @@ def show_component(component: cf.PCComponent) -> None:
     # )
     if component.name:
         with main:
-            st.write("✅ " + f'[{component.name}]({component.link})')
+            st.write("✅ " + f"[{component.name}]({component.link})")
             with st.expander("Details"):
                 for position in component.all_info.split(";"):
                     st.markdown(position)
