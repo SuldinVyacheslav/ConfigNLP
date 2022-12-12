@@ -147,7 +147,7 @@ def parse_info(
     subject: cf.PCComponent, soup: bs  # , translation: pipeline, question: pipeline
 ) -> dict:
 
-    info = {}
+    info: dict[str, str | dict] = {}
 
     if soup is None:
         return info
@@ -156,7 +156,7 @@ def parse_info(
     info[cf.IMAGE] = soup.find(
         "img",
         class_="ProductPageStickyGallery-gallery__image-upper PreviewList__image Image",
-    )["src"]
+    )["src"].title()
     specs = soup.find_all("div", class_="Specifications__row")
     out = ""
     for spec in specs:
