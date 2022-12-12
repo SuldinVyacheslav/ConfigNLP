@@ -21,23 +21,14 @@ and check if they match.
 
 
 ## Step-by-step
-| Step                                                                                | image                                                                        |
-| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Step                                                                                | image                                                                         |
+| ----------------------------------------------------------------------------------- |-------------------------------------------------------------------------------|
 | Using *button* create **New configuration**                                         | <img align="center" src="https://i.ibb.co/z5cr5sp/button.png" width="300">    |
-| Now go to *sidebar* and choose **PC component**<br>Wait for information...          | <img  align="center" src="https://i.ibb.co/10cs7xw/select.png"  width="300" > |
-| Fine! It received **information** about the selected element.                       |   |
-| Go to *tabs* and analyse it's **characteristics** and **view**                      |  <img align="center" src="https://i.ibb.co/FbxXrW5/tab.png"  width="300">                                                                            |
-| Now add more! But be careful of **compatibilities**: solve errors if they appears!  |                                                                              |
+| Now go to *sidebar* and choose **PC component**<br>Wait for information...          | <img  align="center" src="https://i.ibb.co/10cs7xw/select.png"  width="300">  |
+| Fine! It received **information** about the selected element.                       | <img align="center" src="https://i.ibb.co/F04zyNj/added.png"  width="300">    |
+| Go to *tabs* and analyse it's **characteristics** and **view**                      | <img align="center" src="https://i.ibb.co/FbxXrW5/tab.png"  width="300">      |
+| Now add more! But be careful of **compatibilities**: solve errors if they appears!  | <img align="center" src="https://i.ibb.co/7GMpwRR/copm.png"  width="300">      |
 | And look at the **price** of the selected items!                                    | <img align="center" src="https://i.ibb.co/QnNXbV5/cost.png"  width="300">     |
-
-
-
-## Don't forget
-
-If you will select components to othen, server must respond with 429 (Too many requests error)... Be rational!  
- <p align="center">
-      <img src="https://i.ibb.co/B22qKhX/permission.png" width="706">
-</p>
 
 Have fun!
 
@@ -48,6 +39,6 @@ Have fun!
 ```pip install -r requirement.txt```  
 ```streamlit src/main.py```  
 
-<h1 style="text-align: center;">License</h1>  
-  
+<h1 style="text-align: center;">License</h1>
+
 Source code of this repository is released under the [Apache-2.0 license](https://choosealicense.com/licenses/apache-2.0/)

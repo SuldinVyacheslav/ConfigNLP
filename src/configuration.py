@@ -20,8 +20,13 @@ LENGTH: Final[str] = "len"
 SLOT: Final[str] = "slot"
 CPU_SOCKET: Final[str] = "socket"
 HEAT_OUT: Final[str] = "heat"
-
 CAPACITY: Final[str] = "capac"
+# magic words for parser
+LINK: Final[str] = "link"
+PRICE: Final[str] = "price"
+MAIN: Final[str] = "main_info"
+IMAGE: Final[str] = "image"
+ALL: Final[str] = "all_info"
 
 
 class PCComponent:
@@ -31,7 +36,7 @@ class PCComponent:
         self.name = ""
         self.price = 0
         self.link = ""
-        self.is_set = ""
+        self.is_set = False
         self.image = ""
         self.all_info = ""
 
@@ -136,8 +141,8 @@ class Configuration:
 
     def pbwatt_check(self) -> None:
         if (self.powb.is_set and self.gpu.is_set) and (
-            not int(self.powb.main_info[CAPACITY][:-3])
-            > int(self.gpu.main_info[INTAKE][:-3])
+            not int(self.powb.main_info[CAPACITY].split(" ")[0])
+            > int(self.gpu.main_info[INTAKE].split(" ")[0])
         ):
             self.problems.append(
                 "Power block is too weak: "

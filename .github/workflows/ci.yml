@@ -48,5 +48,4 @@ jobs:
           pip install transformers[sentencepiece]
       - name: Test with pytest
         run: |
-          cd tests
           pytest
