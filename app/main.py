@@ -1,14 +1,13 @@
 import json
 import os
-
-from parser import parse_info, get_soup
-import streamlit as st
-import configuration as cf
-from pathlib import Path
-from transformers import pipeline
-
 import sys
 
+from pathlib import Path
+
+sys.path.append(os.getcwd())
+
+import src.configuration as cf
+import streamlit as st
 
 st.set_page_config(
     page_title="MyConfig",
@@ -22,31 +21,10 @@ st.set_page_config(
     },
 )
 
-sys.path.append("/app/confignlp/src")
 st.markdown(
-    Path(os.path.join(os.getcwd(), "src", "header.md")).read_text(),
+    Path(os.path.join(os.getcwd(), "css/header.md")).read_text(),
     unsafe_allow_html=True,
 )
-
-if "models" not in st.session_state:
-    pass
-    question_name = "deepset/roberta-base-squad2"
-    question = pipeline(
-        "question-answering", model=question_name, tokenizer=question_name
-    )
-
-    # classifier_name = "joeddav/xlm-roberta-large-xnli"
-    # classifier = pipeline("zero-shot-classification", model=classifier_name)
-
-    translation_name = "Helsinki-NLP/opus-mt-ru-en"
-    translation = pipeline(
-        "translation", model=translation_name, tokenizer=translation_name
-    )
-
-    st.session_state["models"] = {
-        "translation_model": translation,
-        "q_a_model": question,
-    }
 
 
 if "configs" not in st.session_state:
@@ -61,13 +39,13 @@ def read_data(filename: str) -> dict:
 
 
 if "data" not in st.session_state:
-    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "src", "data.json"))
-    st.session_state["data_names"] = {}
-    for key in st.session_state["data"].keys():
-        names = []
-        for pair in st.session_state["data"][key]:
-            names.append(pair["name"])
-        st.session_state["data_names"][key] = names
+    st.session_state["data"] = read_data(os.path.join(os.getcwd(), "data/info.json"))
+    # st.session_state["data_names"] = {}
+    # for key in st.session_state.data:
+    #     names = []
+    #     for pair in st.session_state.data[key]:
+    #         names.append(pair["name"])
+    #     st.session_state["data_names"][key] = names
 
 
 # def resolve_search(key, subject, containter):
@@ -94,9 +72,8 @@ def show_component(component: cf.PCComponent) -> None:
     # )
     if component.name:
         with main:
-            st.write("✅ " + component.name)
+            st.write("✅ " + f'[{component.name}]({component.link})')
             with st.expander("Details"):
-                st.write(component.main_info.values())
                 for position in component.all_info.split(";"):
                     st.markdown(position)
                 st.markdown("### COST: " + str(component.price) + "₽")
@@ -143,7 +120,7 @@ def add(component_type: str) -> None:
         )
         return
     cur = st.session_state.configs[0]
-    call = {
+    call: dict[str, cf.PCComponent] = {
         cf.MB: cur.mob,
         cf.CPU: cur.cpu,
         cf.GPU: cur.gpu,
@@ -151,34 +128,46 @@ def add(component_type: str) -> None:
         cf.PB: cur.powb,
         cf.BODY: cur.body,
     }
-    call[component_type].name = st.session_state[component_type]
-    sub = call[component_type]
-    call[component_type].link = st.session_state.data[component_type][
-        st.session_state.data_names[component_type].index(
-            st.session_state[component_type]
-        )
-    ]["link"]
-    if (
-        parse_info(
-            sub,
-            get_soup(sub),
-            st.session_state.models["translation_model"],
-            st.session_state.models["q_a_model"],
-        )
-        is None
-    ):
-        call[component_type].name = ""
-        st.error("🚫 Seems like 429 code - permission denied, try later!")
+
+    component_name: str = st.session_state[component_type]
+    component = call[component_type]
+    component_data = st.session_state.data[component_type][component_name]
+
+    # mapping
+    component.link = component_data[cf.LINK]
+    component.price = component_data[cf.PRICE]
+    component.name = component_name
+    component.main_info = component_data[cf.MAIN]
+    component.image = component_data[cf.IMAGE]
+    component.all_info = component_data[cf.ALL]
+    component.is_set = True
 
     st.session_state[component_type] = ""
+    # call[component_type].name = st.session_state[component_type]
+    # sub = call[component_type]
+    # call[component_type].link = st.session_state.data[component_type][
+    #     st.session_state.data_names[component_type].index(
+    #         st.session_state[component_type]
+    #     )
+    # ]["link"]
+    # if (
+    #     parse_info(
+    #         sub,
+    #         get_soup(sub),
+    #         st.session_state.models["translation_model"],
+    #         st.session_state.models["q_a_model"],
+    #     )
+    #     is None
+    # ):
+    #     call[component_type].name = ""
+    #     st.error("🚫 Seems like 429 code - permission denied, try later!")
 
 
 with st.sidebar:
-    data = st.session_state.data_names
-    for cmnt in data.keys():
+    for cmnt in st.session_state.data.keys():
         add_selectbox = st.sidebar.selectbox(
             cmnt,
-            [""] + st.session_state.data_names[cmnt],
+            [""] + [key for key in st.session_state.data[cmnt]],
             key=cmnt,
             on_change=add,
             args=(cmnt,),
@@ -194,5 +183,5 @@ if __name__ == "__main__":
     show_all()
 
 
-with open(os.path.join(os.getcwd(), "src", "style.css")) as f:
+with open(os.path.join(os.getcwd(), "css/style.css")) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

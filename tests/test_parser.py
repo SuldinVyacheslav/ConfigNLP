@@ -1,17 +1,12 @@
 from transformers import pipeline
 
-import sys
-
 # sys.path is a list of absolute path strings
 import sys
 from os.path import dirname, abspath
 
 sys.path.append(dirname(dirname(abspath(__file__))) + "/src")
-import src.parser as ps
-import src.configuration as cf
-import requests as rq
-import json
-
+import app.parser as ps
+import app.configuration as cf
 
 from bs4 import BeautifulSoup as bs
 

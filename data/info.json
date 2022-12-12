@@ -1,0 +1,282 @@
+{
+  "Motherboard": {
+    "MSI H510M-A PRO": {
+      "link": "https://www.citilink.ru/product/materinskaya-plata-msi-h510m-a-pro-soc-1200-intel-h510-2xddr4-matx-ac-1564800/",
+      "price": 5290,
+      "image": "https://items.s1.citilink.ru/1564800_v01_b.jpg",
+      "all_info": "MSI brand; H510M-A PRO; LGA 1200 CPU nest; Supported CPU compatibility specify on the manufacturer &apos; s website.; Intel H510 chipset; DIMM memory type; 3200 MHz memory frequency specification; 3200/ 3000 / 2933 / 2800 / 2666 / 2400 / 2133 MHz operating memory frequency support; Supported memory modules specify compatibility on manufacturer &apos; s website; DDR42 memory slots; Maximum operational memory volume 64 GB; Operational memory mode dual-channel; SlotsPCI-E x1 1; PCI-E 4.0 x16 1; SATA34 connectors; M.21 connectors; Supported disks and storage devices for compatibility specify on the manufacturer &apos; s website; PS/2 1 unit (klavature or mouse); External USB 3.0 2; External USB 2.04; External USB 2.04; D-Sub (VGA) 1; HDMI connector 1; Gigabit Ethernet network interface; Intel i219V network controller; Channel 8 sound (7.1); Audio controller Realtek ALC897; Form Factor MATX; Motherboard and Processor 24+8 pin; Type of delivery Ret; Packaging (ed) DhshshhV 0.2x0.26x0.06 m; Packaging weight (ed) 0.835 kg; Guarantee 36 ms; Guarantee:",
+      "main_info": {
+        "chipset": "Intel H510",
+        "socket": "LGA 1200",
+        "atx": "mATX",
+        "RAMstandart": "DDR4 2",
+        "RAMtype": "DIMM",
+        "clock": "3200"
+      }
+    },
+    "ASUS PRIME H510M-K": {
+      "link": "https://www.citilink.ru/product/materinskaya-plata-asus-prime-h510m-k-soc-1200-intel-h510-2xddr4-matx-1498864/",
+      "price": 5990,
+      "image": "https://items.s1.citilink.ru/1498864_v01_b.jpg",
+      "all_info": "ASUS brand; PRIME H510M-K model; LGA 1200 CPU nest; Supported CPU compatibility specify on the manufacturer &apos; s website.; Intel H510 chipset; DIMM memory type; 2933 MHz memory frequency specification; 3200(OC)/2933/ 2800/266/240/ 2133 MHz operating memory frequency support; Supported memory modules specify compatibility on manufacturer &apos; s website; DDR42 memory slots; 64 GB maximum operating memory capacity; 2-channel operating memory mode; PCI-EE slotsx1 1; PCI-E 4.0 x16 1; SATA34 connectors; M.2-1 connectors; Supported disks and compatibility storage devices specify on the manufacturer &apos; s website; PS/2 1 unit (klavature or mouse); External USB 3.0 2; External USB 2.04; D-Sub (VGA) 1; HDMI 1 connector; Gigabit Ethernet network interface; Intel i219V network controller; Channel 8 sound (7); Audio controller Realtek ALC897/887; MATX; Maternal Payment and Processor 24+8 pen; Ret type; Package weight (ed) 0.912 kg; Guarantee 36 months;",
+      "main_info": {
+        "chipset": "Intel H510",
+        "socket": "LGA 1200",
+        "atx": "mATX",
+        "RAMstandart": "DDR4 2",
+        "RAMtype": "DIMM",
+        "clock": "2933"
+      }
+    },
+    "ASUS TUF GAMING B660M-PLUS WIFI D4": {
+      "link": "https://www.citilink.ru/product/materinskaya-plata-asus-tuf-gaming-b660m-plus-wifi-d4-soc-1700-intel-b-1669369/",
+      "price": 13990,
+      "image": "https://items.s1.citilink.ru/1669369_v01_b.jpg",
+      "all_info": "ASUS brand; TUF GAMING B660M-PLUS WIFI D4; LGA 1700 CPU nest; Supported CPU compatibility on the manufacturer &apos; s website; Intel B660 Chipset; DIMM memory type; 3200 MHz memory frequency specification; Operating memory support 5333(OC)/ 5066(OC)/ 5000(OC)/ 4800(OC)/ 4600(OC)/ 4400(OC)/ 4266(OC)/ 4000(OC)/3866(OC)/ 3733(OC)/ 3600(OC)/3466(OC)/3400(OC)/3333(OC)/ 3200 3000/2933/ 2666/240/2133 MHz; Supported memory modulesPlease specify on the manufacturer &apos; s website; DDR4 4 memory slots; 128 GB maximum operating memory capacity; 2-channel operating mode; PCI-E 4.0 x1 1 slots; PCI-E 3.0 x16 1 slots; PCI-E 5.0 x16 1 slots; PCI-E x16 slot speed in multi-channel mode x16 in single-channel mode, x16 + x4 in two-channel mode; Support for Intel Optane 1; SATA3 partitions 4; M2 slots; Supported disks and storage facilities for compatibility specify on the manufacturer &apos; s website; SATA RAID support is available; Support for RAID 0 is available; Support for RAID 5 is available; Support for RAID 10 is available; Support for RAID 5 is available; Retrate S/PDF (optic) 1; External Plots 2 2 2 2; Supported disks and storage facilities are available on the producer &apos; s website; SATA RAID track; 1stop; 1strust 2nd 2nd; 1st; 1st; 2nd 2nd 2nd 2nd 2nd; 1st; 1st 2ndi-T 2ndi-T",
+      "main_info": {
+        "chipset": "Intel B660",
+        "socket": "LGA 1700",
+        "atx": "mATX",
+        "RAMstandart": "DDR4 4",
+        "RAMtype": "DIMM",
+        "clock": "3200 МГц"
+      }
+    },
+    "ASUS ROG STRIX B660-F GAMING WIFI": {
+      "link": "https://www.citilink.ru/product/materinskaya-plata-asus-rog-strix-b660-f-gaming-wifi-soc-1700-intel-b6-1669365/",
+      "price": 21990,
+      "image": "https://items.s1.citilink.ru/1669365_v01_b.jpg",
+      "all_info": "ASUS brand; ROG STRIX B660-F GAMING WIFI; LGA 1700 CPU Nest; Supported CPUs, specify compatibility on the manufacturer &apos; s website; Intel B660 Chipset; DIMM type of memory support; 4800 MHz frequency specification; 6000(OC)/5800(OC)/5600(OC)/5400(OC)/ 5200(OC)/500(OC)/4800 MHz operating memory frequency support; Supported memory modules specify on manufacturer &apos; s site; DDR54 memory slots; 128 GB maximum operating memory capacity; Operating modeTwo-channel operational memory; PCI-E x1 2; PCI-E X1-2 slots; PCI-E 3.0 x16 1 slots; PCI-E 5.0 x16 slots; PCI-E x16 multichannel x16 slot speed in single-channel mode, x16 + x4 dual-channel mode; Support for Intel Optane is available; Intel Optane; SATA3; M.2 slots; M2 3; Supported disks and compatibility storage devices specify on the manufacturer &apos; s website; SATA RAID support is available; RAID 0 support is available; RAID 1 support is available; RAID 5 support is available; RAID 10 support is available; External USB 3.05 support; External USB 2.0 2; External Pumping process 36+USB 3.1 1; External USB 3.2 (Type-C) 1; Display Port 1 support; Support for RAID 1 is available; RAID support is available; RAID 10 support is available; External USB 3.0 5; External USB 2.0; External pumping process2+; External PB 3.2B 3.2 (Tepe-C2; External PB 3.2 (T) 1; Display Portor 1; HDM Pitor 1; HDM line 1; Vt; Vtruttttttript; Ap; Ap; Vtrutttttttttttttriptriptriptriptriptk",
+      "main_info": {
+        "chipset": "Intel B660",
+        "socket": "LGA 1700",
+        "atx": "ATX",
+        "RAMstandart": "DDR5 4",
+        "RAMtype": "DIMM",
+        "clock": "4800"
+      }
+    }
+  },
+  "Processor": {
+    "Intel Core i5 11400F,  OEM": {
+      "link": "https://www.citilink.ru/product/processor-intel-s-core-i5-11400f-soc-1200-2-6ghz-oem-1722999/",
+      "price": 11590,
+      "image": "https://items.s1.citilink.ru/1722999_v01_b.jpg",
+      "all_info": "Brand INTEL; Model 11400F; Rocket Lake Core; LGA 1,200 CPU Nest; Number of kernels 6; Number of flows 12; Frequency 2.6 GHz and 4.4 GHz in Turbo mode; L3 cache 12 MB; Debunch 64 bit; Technology Process 14 nm; Multiplicator blocked; Tyre capacity (GT/s) 8; Heat capacity 65 W; Maximum temperature 100 °C; Type of supply OEM; Maximum memory capacity 128 GB; DDR4 memory type; Memory frequency support 3200 MHz; Number of memory channels 2; Pass capacity 250 GB/s; ECC memory support not supported; PCI Express PCI Express 4.0; PCI Express 20 channel configuration; PCI Express 1x16+1x4, 2x8+1x4, 1x8+3x4 complete graphic core missing; package weight (ed) 0.039 kg; guarantee 12 months;",
+      "main_info": {
+        "socket": "LGA 1200",
+        "clock": "2.6",
+        "heat": "65 Вт"
+      }
+    },
+    "Intel Core i3 10100F,  OEM": {
+      "link": "https://www.citilink.ru/product/processor-intel-s-core-i3-10100f-soc-1200-3-6ghz-oem-1723000/",
+      "price": 5790,
+      "image": "https://items.s1.citilink.ru/1723000_v01_b.jpg",
+      "all_info": "Brand INTEL; Model 10100F; Comet Lake Core; LGA 1,200 CPU Nest; Number of Cores 4; Number of Flows 8; Frequency 3.6 GHz and 4.3 GHz in Turbo mode; L3 Cash 6 MB; Idle 64 bits; Technology Process 14 nm; Multiplicator blocked; Tyre Capacity (GT/s) 8; Heat Capacity 65 W; Maximum temperature 100 °C; Type of supply OEM; Maximum memory capacity 128 GB; DDR4 memory type; Memory frequency support 2666 MHz; Number of memory channels 2; Pass capacity 241.6 memory GB/s; ECC memory support not supported; PCI Express PCI Express 3.0; PCI Express 16; PCI Express configuration 1x16, 2x8, 1x8+2x4; built-in graphic core missing; package weight (ed) 0.029 kg; guarantee 12 months;",
+      "main_info": {
+        "socket": "LGA 1200",
+        "clock": "3.6",
+        "heat": "65 Вт"
+      }
+    },
+    "Intel Core i5 13600K,  OEM": {
+      "link": "https://www.citilink.ru/product/processor-intel-s-core-i5-13600k-soc-1700-3-5ghz-iuhdg770-oem-1872488/",
+      "price": 28990,
+      "image": "https://items.s1.citilink.ru/1872488_v01_b.jpg",
+      "all_info": "Brand INTEL; Model 13600K; Raptor Lake Core; LGA 1700 CPU Nest; Number of kernels 14; Number of flows 20; Quantity of highly productive kernels 6; Quantity of energy efficient kernels 8; Processor frequency in Turbo 3.0 2.6 GHz; Frequency 3.9 GHz and 5.1 GHz in Turbo mode; Energy efficient kernels 3.9 GHz; L3 cache 24 MB; Computation of 64 bits; Technology process 10 nm; Multiplot released; Heat distribution 125 W; Turbo heating 181 W; MaximumTemperature 100 °C; Type of supply OEM; Maximum memory volume 128 GB; Memory type DDR5/ DDR4; Memory frequency support 5600/3200 MHz; Number of memory channels 2; Memory capacity 89.6 GB/s; ECC memory support is not maintained; PCI Express PCI Express 5.0; PCI Express 20 channel number; PCI Express 1x16+4, 2x8+4 configuration; built-in graphic core is; Intel UHD Graphics 770 model; Graphic Core frequency 300 MHz and 1,500 MHz Turbo; Packing weight (ed) 0.049 kg; Guarantee 12 mes.",
+      "main_info": {
+        "socket": "LGA 1700",
+        "clock": "3.9",
+        "heat": "125 Вт"
+      }
+    },
+    "Intel Core i5 9500,  OEM": {
+      "link": "https://www.citilink.ru/product/processor-intel-s-core-i5-9500-soc-1151v2-3ghz-iuhdg630-oem-1723041/",
+      "price": 14590,
+      "image": "https://items.s1.citilink.ru/1723041_v01_b.jpg",
+      "all_info": "Brand INTEL; Model 9500; Coffee Lake Core; LGA 1151v2 CPU Nest; Number of Cores 6; Number of Flows 6; Frequency 3 GHz and 4.4 GHz in Turbo mode; L3 Cash 9 MB; Idle 64 bits; Technology Process 14 nm; Multiplicator blocked; Tyre Capacity (GT/s) 8; Heat Capacity 65W; Maximum temperature 100 °C; Type of supply OEM; Maximum storage capacity 128 GB; DDR4 memory type; Memory frequency support 2666 MHz; Number of memory channels 2; Capacity of memory channels 2; Capacity of memory41.6 GB/s; ECC memory support not supported; PCI Express PCI Express 3.0; PCI Express 16 channel configuration; PCI Express 1x16, 2x8, 1x8+2x4 built-in graphic core available; Intel UHD Graphics 630 graphics core model; 350 MHz and 1,100 MHz Turbo graphics frequency; Maximum video volume of 64 GB; package weight (ed) 0.024 kg; Guarantee 12 months;",
+      "main_info": {
+        "socket": "LGA 1151v2",
+        "clock": "3",
+        "heat": "65 Вт"
+      }
+    }
+  },
+  "Video Card": {
+    "Palit NVIDIA  GeForce RTX 2060SUPER,  PA-RTX2060SUPER DUAL 8G no LED": {
+      "link": "https://www.citilink.ru/product/videokarta-palit-pci-e-pa-rtx2060super-dual-8g-no-led-nv-rtx2060super-1489448/",
+      "price": 28990,
+      "image": "https://items.s1.citilink.ru/1489448_v01_b.jpg",
+      "all_info": "PALIT brand; PA-RTX2060SUPER model; PA-RTX2060SUPER DUAL 8G no LED; INTERFESSE PCI-E 3.0; NVIDIA GeForce RTX 2060SUPER; Graphic Processor Frequency 1470 MHz (1650 MHz, Boost mode); Techprocess Process 12 nm; Video Volume of 8GB; Type of GDR6 video memory; Video memory frequency 14000 MHz; Wire of video memory 256 bits; Maximum Resolution 7680 x 4320; Support for DirectX 12/OpenGL 4.6; Support for NVIDIA NVIDIA DLSS technology, NVIDIA Reflex, NVIDIA STUDIO, NVIDIA RAY Tracing, NVIDIA G-Sync, NVIDIABroadcast, NVIDIA Game Ready, NVIDIA Shadow Play, NVIDIA Ansel, NVIDIA Freestyle, NVIDIA NVENC, NVIDIA VR Works, NVIDIA CUDA; DLSS support is available; DVI 1 connectors; HDMI connectors 1; HDMI 2.0b cut-off version; Display Port 1 break-up version; Display Port 1.4a; Number of monitors supported; Number of monitors supported; 8 pin additional power divides; Maximum power consumption of 175 W; Recommended manufacturer power of BP 550 W; Cooling system active (radiator and two fans); Use of heat tubes is available; Type of delivery of retail; Type of retail; Type of video map 235 mm; Wire of two-scalboard system; Ten-sizing of video charts 40 mm; Altitude of the video map; Altitude of the package 112 mm; Veg.",
+      "main_info": {
+        "RAMstandart": "GDDR6",
+        "heat": "550 Вт",
+        "slot": "PCI-E 3.0"
+      }
+    },
+    "Palit NVIDIA  GeForce RTX 3050,  PA-RTX3050 DUAL": {
+      "link": "https://www.citilink.ru/product/videokarta-palit-pci-e-pa-rtx3050-dual-nv-rtx3050-8192mb-128-gddr6-155-1658278/",
+      "price": 27990,
+      "image": "https://items.s1.citilink.ru/1658278_v01_b.jpg",
+      "all_info": "Brand PALIT; PA-RTX3050 DUAL model; Interface PCI-E 4.0; NVIDIA GeForce RTX 3050; Graphic Processor Frequency 1552 MHz (1777 MHz, Boost mode); Techprocess 8 nm; Video Memory Volume 8 GB; Type of video memory GDR6; Video Memoy Frequency 14000 MHz; Video Immortization of 128 bits; Maximum Resolution 7680 x 4320; Support for DirectX 12 Ultimate/OpenGL 4.6; Support for NVIDIA NVIDIA NVIDIA DLSS, NVIDIA Reflex, NVIDIA STUDIO, NVIDIA Ray Trading, NVIDIA G-Sync, NVIDIA Broadcast, NVIDIA BroadcastNVIDIA Game Ready, NVIDIA Shadow Play, NVIDIA Ansel, NVIDIA Freestyle, NVIDIA NVENC, NVIDIA VR Works, NVIDIA CUDA; Support for beam tracking is available; DLSS support is available; HDMI 1 Refrigeration; HDMI 2.1 version; Display Port 3 connectors; Display Port 1.4a version; Number of monitors supported; Additional power supply items 8 pins; Maximum energy consumption 140 W; Manufacturer &apos; s recommended BP 550W power; Cooling system active (radiator and two fans); Use of heat tubes is available; Type of retail supply; Wire of video maps 245 mm; Wire-cards of two-slot cooling system; 40 mm video map thickness; Height of video map 119 mm; PV Radiator and two fans; Use of heat tubes; Type of retail; Type of video cards 245 mm; Wire of two-scalboard system; Clock of 40 mm; Video chart height of video card 119 mm; Type G.",
+      "main_info": {
+        "RAMstandart": "GDDR6",
+        "heat": "550",
+        "slot": "PCI-E 4.0"
+      }
+    },
+    "GIGABYTE NVIDIA  GeForce GTX 1660TI,  GV-N166TOC-6GD": {
+      "link": "https://www.citilink.ru/product/videokarta-gigabyte-nvidia-geforce-gtx-1660ti-gv-n166toc-6gd-6gb-gddr6-1124050/",
+      "price": 29990,
+      "image": "https://items.s1.citilink.ru/1124050_v01_b.jpg",
+      "all_info": "GIGABYTE brand; GV-N166TOC-6GD model; Interface PCI-E 3.0; NVIDIA GeForce GTX 1660TI video therapist; Graphic CPU frequency 1536 MHz; Techprocess 12 nm; Video memory volume of 6 GB; Type of GDDR6 video memory; Video memory frequency 12000 MHz; Tyre clearance of 192 bits; Maximum resolution of 7680 x 4320; Support for DirectX 12/openGL 4.5; HDMI connectors 1 version; HDMI 2.0b breakout version; Display Port 3; Display Port 1.4 breaker version; Number of monitors supported 4; Breakings8 pin; recommended manufacturer &apos; s power BP 450W; cooling system active (radiator and two fans); use of heat tubes available; OverClock Edition Yes; Type of supply retail; length of video map 225.65 mm; width of video card double-wall cooling system; 41 mm video card thickness; height of video map 122 mm; weight of package (ed) 0.893 kg; Guarantee 36 months;",
+      "main_info": {
+        "RAMstandart": "GDDR6",
+        "heat": "450 Вт",
+        "slot": "PCI-E 3.0"
+      }
+    },
+    "MSI AMD  Radeon RX 6500XT,  RX 6500 XT MECH 2X 4G OC": {
+      "link": "https://www.citilink.ru/product/videokarta-msi-pci-e-4-0-rx-6500-xt-mech-2x-4g-oc-amd-rx6500xt-4096mb-1680448/",
+      "price": 16490,
+      "image": "https://items.s1.citilink.ru/1680448_v01_b.jpg",
+      "all_info": "MSI brand; RX 6500 XT MECH 2X 4G OC; Interface PCI-E 4.0; AMD Radeon RX 6500XT; Graphic Processor Frequency 2685 MHz (2825 MHz in Boost mode); Process 6 nm; Video Memory Volume of 4 GB; Type of GDDR6 video memory; Video Memories Frequency of 18,000 MHz; Type of video memory of 64 bits; Maximum Resolution of 6780 x 4320; Support for DirectX 12 Ultimate/OpenGL 4.6; Support for ray Constellation is available; HDMI 1; HDMI Section Version 2.1; Display Port 1; Breaking VersionDisplay Port 1.4a; Number of monitors supported 2; Additional power supply gaps 6 pin; Maximum energy consumption 107W; Manufacturer &apos; s recommended capacity BP 400W; Refrigeration system active (radiator and two fans); Use of heat tubes available; OverClock Edition Yes; Type of supply retail; Video map length 172 mm; Wire of video card dual cooling system; Thickness of the video card 42 mm; Height of the video card 112 mm; Package dimensions (ed) DhshhB 0.22x0.07x0.31 m; Package weight (ed) 0.91 kg; Guarantee 36 ms.",
+      "main_info": {
+        "RAMstandart": "GDDR6",
+        "heat": "400 Вт",
+        "slot": "PCI-E 4.0"
+      }
+    }
+  },
+  "RAM": {
+    "Patriot Signature PSD48G266681 DDR4 -  8ГБ": {
+      "link": "https://www.citilink.ru/product/modul-pamyati-patriot-signature-psd48g266681-ddr4-8gb-2666-dimm-ret-1083963/",
+      "price": 1550,
+      "image": "https://items.s1.citilink.ru/1083963_v01_b.jpg",
+      "all_info": "Brand PATRIOT; PSD48G2666881; DIMM Form Factor; DDR4 Memory Type; Size of module 8 GB; Number of contacts 288-pin; Speed indicator PC4-21300; Buferization unbuffered; ECC Support not supported; Speed 2666MHz; Voltage 1.2B; Delay 1919-19-43; Ltenency CL19; Number of chips 8; Refrigeration Radiator not available; Type of supply Ret; Weight of package (ed) 0.036 kg; Guarantee 120Mass;",
+      "main_info": {
+        "RAMstandart": "DDR4",
+        "clock": "2666МГц",
+        "capac": "8 ГБ",
+        "RAMtype": "DIMM"
+      }
+    },
+    "Kingston Fury Beast Black KF432C16BBK2/16 DDR4 -  2x 8ГБ": {
+      "link": "https://www.citilink.ru/product/pamyat-ddr4-2x8gb-3200mhz-kingston-kf432c16bbk2-16-rtl-pc4-25600-cl16-1560200/",
+      "price": 4690,
+      "image": "https://items.s1.citilink.ru/1560200_v01_b.jpg",
+      "all_info": "Brand KINGSTON; KF432C16BBK2/16; Form Factor DIMM; DDR4 memory type; Number of modules 2; Size of module 8 GB; Number of contacts 288-pin; Operating mode two-channel; Speed indicator PC4-25600; Bufferization unbuffered; ECC support not supported; Speed 3200 MHz; Voltage 1.35B; Delay 16-18-18; Latentity CL16; Speed (SPD) 2400Hz; Voltage (SPD) 1.2V; Delay (SPD) 17-17; Number of chips 8; Refrigeration radiator available; Type of supply Ret; Packaging weight (ed) 0.08 kg; Guarantee 120 guarantee 120Mass;",
+      "main_info": {
+        "RAMstandart": "DDR4",
+        "clock": "3200МГц",
+        "capac": "8 ГБ",
+        "RAMtype": "DIMM"
+      }
+    },
+    "AMD Radeon R7 Performance Series R7416G2606S2S-U DDR4 -  16ГБ": {
+      "link": "https://www.citilink.ru/product/pamyat-ddr4-16gb-2666mhz-amd-r7416g2606s2s-u-rtl-pc4-21300-cl16-so-dim-1517486/",
+      "price": 2790,
+      "image": "https://items.s1.citilink.ru/1517486_v01_b.jpg",
+      "all_info": "Brand AMD; Model R7416G2606S2S-U; SO-DIMM Form Factor; DDR4 Memory Type; Size of module 16 GB; Number of contacts 260-pin; Operating mode two-channel; Speed Indicator PC4-21300; Buferization unbuffed; ECC Support not supported; Speed 2666MHz; Voltage 1.2V; Delay 16-18-18-35; Latentity CL16; Number of chips 16; No refrigeration radiator; Type of supply Ret; Weight of package (ed) 0.02 kg; Guarantee 24.02 kgMass;",
+      "main_info": {
+        "RAMstandart": "DDR4",
+        "clock": "2666МГц",
+        "capac": "16 ГБ",
+        "RAMtype": "SO-DIMM"
+      }
+    },
+    "Kingston Fury Beast Black KF426C16BBK2/16 DDR4 -  2x 8ГБ": {
+      "link": "https://www.citilink.ru/product/pamyat-ddr4-2x8gb-2666mhz-kingston-kf426c16bbk2-16-rtl-pc4-21300-cl16-1560735/",
+      "price": 4390,
+      "image": "https://items.s1.citilink.ru/1560735_v01_b.jpg",
+      "all_info": "Brand KINGSTON; KF426C16BBK2/16; Form Factor DIMM; DDR4 memory type; Number of modules 2; Size of module 8 GB; Number of contacts 288-pin; Operating mode two-channel; Speed indicator PC4-21300; Bufferization unbuffered; ECC support not supported; Speed 2666MHz; Voltage 1.2V; Delay 16-18-18; Latentity CL16; Number of chips 8; Ret type; Packing envelope (ed) DhshhV 0.10.01x0.09 m; Packaging weight (ed) 0.1 kg; Guarantee 120Mass;",
+      "main_info": {
+        "RAMstandart": "DDR4",
+        "clock": "2666МГц",
+        "capac": "8 ГБ",
+        "RAMtype": "DIMM"
+      }
+    }
+  },
+  "Power Block": {
+    "Aerocool VX PLUS 500W,  500Вт,  черный": {
+      "link": "https://www.citilink.ru/product/blok-pitaniya-aerocool-vx-plus-500w-500vt-120mm-chernyi-retail-vx-500-1049256/",
+      "price": 1990,
+      "image": "https://items.s1.citilink.ru/1049256_v01_b.jpg",
+      "all_info": "Brand AEROCOOL; VX PLUS 500W; Form Factor ATX; Version ATX 12V v2.3; Capacity 500W; Colour Black; Maternal Feeding and Processor 24+4+4 pin; Power line length MP 500 mm; Video Card Feeding 6+2 pin; SATA 3-pieces; Periferal (Molex) 3-pieces; FDD 1-st; Size of fan(s) 120mm; Number of fans one; Speed heater available; Network cable set; Dimensions (ShhVH) 150 x 86 x 140 mm; Retail delivery type; Packing weight (ed) 1.32 kg; Guarantee 24Mass;",
+      "main_info": {
+        "capac": "500 Вт",
+        "len": "150"
+      }
+    },
+    "Aerocool VX PLUS 600W,  600Вт,  черный": {
+      "link": "https://www.citilink.ru/product/blok-pitaniya-aerocool-vx-plus-600w-600vt-120mm-chernyi-retail-vx-600-1049258/",
+      "price": 2270,
+      "image": "https://items.s1.citilink.ru/1049258_v01_b.jpg",
+      "all_info": "Brand AEROCOOL; VX PLUS 600W; Form Factor ATX; Version ATX 12V v2.3; Capacity 600W; Color black; Maternal Feeding and Processor 24+4+4 pin; Power Line Length MP 500 mm; Video Card Feeding 2x(6+2) pin; SATA 3-pieces; Periferal (Molex) 3-pieces; FDD 1 connector size; 120-mm fan(s); Number of fans one; There is; Network cable complete; Dimensions (ShVH) 150 x 86 x 140 mm; Type of delivery retail; Packaging weight (ed) 1.43 kg; Guarantee 24.3 kg; Guarantee 24.4Mass;",
+      "main_info": {
+        "capac": "600 Вт",
+        "len": "150"
+      }
+    },
+    "DeepCool DQ850-M-V2L,  850Вт,  черный": {
+      "link": "https://www.citilink.ru/product/blok-pitaniya-deepcool-atx-850w-dq850-m-v2l-80-gold-20-4pin-apfc-120mm-1781719/",
+      "price": 9680,
+      "image": "https://items.s1.citilink.ru/1781719_v01_b.jpg",
+      "all_info": "Brand DEEPCOOL; Model DQ850-M-V2L; Form Factor ATX; Version ATX v2.4; Power 850W; Active PFC is available; Productivity (CPD) 90 per cent; Certification in Standard 80 PLUS GOLD; Detachment (MTBF) 100,000 h; Connecting Cables are available; Colour Black; Maternal Feeding and Processor 20+4 pin; Power line length MP 550 mm; Video Card Feeding 4x(6+2) pin; SATA 6-pieces; Periferal (Molex) 2 units; Fan Size(s) 120mm; Number of Fans One; Network Cable in NetworkSet; Dimensions (ShVH) 150 x 86 x 160 mm; Type of delivery retail; Weight of package (ed) 0.5 kg; Guarantee 120 months;",
+      "main_info": {
+        "capac": "850 Вт",
+        "len": "150"
+      }
+    },
+    "Aerocool AERO WHITE,  600Вт,  черный": {
+      "link": "https://www.citilink.ru/product/blok-pitaniya-aerocool-aero-white-600vt-120mm-chernyi-retail-aero-whit-1207079/",
+      "price": 3700,
+      "image": "https://items.s1.citilink.ru/1207079_v01_b.jpg",
+      "all_info": "Brand AEROCOOL; AERO WHITE model; ATX Form Factor; version ATX 12V v2.4; Power 600W; Active PFC is available; Productivity (CPD) 80%; Certification in Standard 80 PLUS; Black Color; Maternal Feeding and Processor 24+4+4 pin; Power line length MP 500 mm; Video Card Feeding 2x(6+2) pin; SATA 5 Splits; Periferal (Molex) 3 units; Size of fan(s) 120mm; Number of fans 1; Turner speeder is available; Network cable in the kit; Type of retail supply; Packaging package package type(ed) DhShV 0.27x0.1x0.2 m; package weight (ed) 1.9 kg; Guarantee 24 months;",
+      "main_info": {
+        "capac": "600",
+        "len": "0.27x0.1x0.2 м"
+      }
+    }
+  },
+  "Body": {
+    "mATX Accord ACC-261B,  черный": {
+      "link": "https://www.citilink.ru/product/korpus-accord-acc-2601b-chernyi-bez-bp-matx-1x80mm-1x92mm-2x120mm-2xus-1721880/",
+      "price": 1400,
+      "image": "https://items.s1.citilink.ru/1721880_v01_b.jpg",
+      "all_info": "ASCORD brand; ACC-261B model; Mini-Tower type size; MATX Form Factor; 2.5 \"inners\"; 3.5\" inner sections 1; Number of expansion slots 4; HDD longitudinal location; Internal basket for HDD non-removable; Frontal breaks USB 2.0 2; Frontal breaks USB 3.0 1; Frontal audio separations are available; Ability to install 1x80 mm fans to the rear; BP location is higher; BP power is not installed; Steel/plastic body material; Wall thickness of shell 0.45 mm; Colour of shell shellBlack; Dimensions of the shell of ShhWhG (external) 168 x 350 x 291 mm; Package dimensions (ed) DhShhB 0.39 x 0.2 x 0.34 m; Weight of package (ed) 3.2 kg; Guarantee 12 months;",
+      "main_info": {
+        "atx": "mATX"
+      }
+    },
+    "ATX Accord SKY-01,  черный": {
+      "link": "https://www.citilink.ru/product/korpus-atx-accord-sky-01-midi-tower-bez-bp-chernyi-405924/",
+      "price": 2010,
+      "image": "https://items.s1.citilink.ru/405924_v01_b.jpg",
+      "all_info": "ASCORD brand; SKY-01 model; Midi-Tower type size; ATX Form Factor; Exterior Sections 5.25\" 1; 3.5 \"Inner 1; Number of expansion slots 7; HDD longitudinal location; HDD inner basket is non-removable; 350 mm maximum video card length; U.S.B 2.0 2; Frontal breaks USB 3.0 1; Frontal audio separations are available; 2x120 mm for front 1x120 mm for rear 1x120 mm on side; BP location is upper; BP power is not available; BP power is not availableis installed; the front panel is transparent; the steel body material; the colour of the shell is black; the dimensions of the shell are 200 x 423 x 395 mm (external); the packaging dimensions (ed) of the DhShhB are 0.48 x 0.22 x 0.439 m; the weight of the package (ed) 3.5 kg; the guarantee is 12 months;",
+      "main_info": {
+        "atx": "ATX"
+      }
+    },
+    "a FM-608,  черный": {
+      "link": "https://www.citilink.ru/product/korpus-matx-formula-fm-608-micro-tower-450vt-chernyi-307580/",
+      "price": 3580,
+      "image": "https://items.s1.citilink.ru/307580_v01_b.jpg",
+      "all_info": "FORMULA brand; FM-608 model; Microsoft-Tower type size; MATX Form Factor; 3.5' Outer 1; 5.25' Outer 1; 2.5' Interior 1; 3.5' Inner 2; Number of expansion slots 4; HDD longitudinal location; HDD inner basket is non-removable; 300 mm maximum video card length; Frontal links USB 2.0 2; Frontal audio divides are available; Ventilators on the rear panel 1x80 mm; Capacity to install 1x120 mm fans on the front 1x120 mm on the side; Location of BPUpper; BP 450W; BP Formula manufacturer; Maternal Feeding 24+4+4 pin; Feeding line length MP 430 mm; Video Card Feeding 6 pin; Periffial (Molex) 2 units; SATA 3 units; FDD 1 breakpoints; Steel body material; Colour of the shell black; Dimensions of the SchwWHG (external) 165 x 360 x 380 mm; Package dimensions (ed) DhshhV 0.4x0.243 m; Packaging weight (ed) 4.5 kg; Guarantee 12 ms.",
+      "main_info": {
+        "atx": "mATX"
+      }
+    },
+    "mATX Aerocool Playa Slim,  черный": {
+      "link": "https://www.citilink.ru/product/korpus-matx-aerocool-playa-slim-slim-tower-bez-bp-chernyi-1096394/",
+      "price": 3290,
+      "image": "https://items.s1.citilink.ru/1096394_v01_b.jpg",
+      "all_info": "AEROCOOL brand; Playa Slim model; Slim-Tower type size; MATX Form Factor; 5.25 \"outsides 1; 2.5\" inner sections 1; 3.5\" inner sections 1; Number of expansion slots 4; HDD vertical position; HDD inner basket non-removable; 240 mm maximum video card length; Frontal breaks USB 3.0 2; Frontal audio separations are available; Ventilators on the upper panel 1x80 mm; PB lower position; BP power not installed; Steel body material; wall thickness of the shell 0.5 mm; shell colourBlack; Dimensions of the shell of ShhWhG (external) 112 x 300 x 430 mm; Weight of the shell 3.1 kg; Package dimensions (ed) DhShhB 0.36x0.16x0.48 m; Weight of the package (ed) 3.1 kg; Guarantee 12 months;",
+      "main_info": {
+        "atx": "mATX"
+      }
+    }
+  }
+}
