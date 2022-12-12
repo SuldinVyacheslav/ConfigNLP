@@ -32,24 +32,8 @@ test_html = {
     "Body": "samples/body.json",
 }
 
-question_name = "deepset/roberta-base-squad2"
-translation_name = "Helsinki-NLP/opus-mt-ru-en"
-models = {
-    "translation_model": pipeline(
-        "translation", model=translation_name, tokenizer=translation_name
-    ),
-    "q_a_model": pipeline(
-        "question-answering", model=question_name, tokenizer=question_name
-    ),
-}
-
-
-def test_first() -> None:
-    assert 1 == 1, "YES"
-
 
 def test_parser_motherboard() -> None:
-    # assert 1 == 1, "EYA"
     right_parsed_mb = {
         cf.CHIPSET: "Intel H470",
         cf.SOCKET: "LGA 1200",
@@ -60,6 +44,7 @@ def test_parser_motherboard() -> None:
     }
     f = open(os.path.join(os.getcwd(), "tests/samples/mb.json"), "r")
     info = ps.parse_info(cfg.mob, bs(f.read(), "html.parser"))
+    print(info)
     for key in right_parsed_mb:
         assert info[cf.MAIN][key] == right_parsed_mb[key]
 

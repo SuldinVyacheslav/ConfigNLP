@@ -102,47 +102,26 @@ class Configuration:
         self.problems: list[str] = []
 
     def get_price(self) -> int:
-        return (
-            self.mob.price
-            + self.cpu.price
-            + self.body.price
-            + self.ram.price
-            + self.gpu.price
-            + self.powb.price
-        )
+        return self.mob.price + self.cpu.price + self.body.price + self.ram.price + self.gpu.price + self.powb.price
 
     def socket_check(self):
-        if (self.mob.is_set and self.cpu.is_set) and (
-            not self.mob.main_info[SOCKET] == self.cpu.main_info[SOCKET]
-        ):
-            self.problems.append(
-                "socket: "
-                + self.mob.main_info[SOCKET]
-                + " X "
-                + self.cpu.main_info[SOCKET]
-            )
+        if (self.mob.is_set and self.cpu.is_set) and (not self.mob.main_info[SOCKET] == self.cpu.main_info[SOCKET]):
+            self.problems.append("socket: " + self.mob.main_info[SOCKET] + " X " + self.cpu.main_info[SOCKET])
 
     def ram_check(self):
         if self.ram.is_set and self.mob.is_set:
             if not self.mob.main_info[DDR][:4] == self.ram.main_info[DDR]:
                 self.problems.append(
-                    "RAM type mismatch: "
-                    + self.mob.main_info[DDR][:4]
-                    + " X "
-                    + self.ram.main_info[DDR]
+                    "RAM type mismatch: " + self.mob.main_info[DDR][:4] + " X " + self.ram.main_info[DDR]
                 )
             if not self.mob.main_info[RAM_TYPE] == self.ram.main_info[RAM_TYPE]:
                 self.problems.append(
-                    "RAM form mismatch: "
-                    + self.mob.main_info[RAM_TYPE]
-                    + " X "
-                    + self.ram.main_info[RAM_TYPE]
+                    "RAM form mismatch: " + self.mob.main_info[RAM_TYPE] + " X " + self.ram.main_info[RAM_TYPE]
                 )
 
     def pbwatt_check(self):
         if (self.powb.is_set and self.gpu.is_set) and (
-            not int(self.powb.main_info[CAPACITY].split(" ")[0])
-            > int(self.gpu.main_info[INTAKE].split(" ")[0])
+            not int(self.powb.main_info[CAPACITY].split(" ")[0]) > int(self.gpu.main_info[INTAKE].split(" ")[0])
         ):
             self.problems.append(
                 "Power block is too weak: "
@@ -152,14 +131,9 @@ class Configuration:
             )
 
     def size_check(self):
-        if (self.mob.is_set and self.body.is_set) and (
-            not self.mob.main_info[ATX] == self.body.main_info[ATX]
-        ):
+        if (self.mob.is_set and self.body.is_set) and (not self.mob.main_info[ATX] == self.body.main_info[ATX]):
             self.problems.append(
-                "Form-factor mismatch: "
-                + self.mob.main_info[ATX]
-                + ", but body is "
-                + self.body.main_info[ATX]
+                "Form-factor mismatch: " + self.mob.main_info[ATX] + ", but body is " + self.body.main_info[ATX]
             )
 
     def check_compatibility(self):
