@@ -17,8 +17,8 @@ def load_models():
     models["trans"] = pipeline(
         "translation", model=translation_name, tokenizer=translation_name
     )
-    models["class"] = classifier_name = "joeddav/xlm-roberta-large-xnli"
-    classifier = pipeline("zero-shot-classification", model=classifier_name)
+    classifier_name = "joeddav/xlm-roberta-large-xnli"
+    models["class"] = pipeline("zero-shot-classification", model=classifier_name)
 
 
 def pages_num(soup: bs) -> int:
@@ -39,8 +39,6 @@ def parse(to_file: str):
 
     if not models:
         load_models()
-    else:
-        return
 
     data: dict[str, dict[str, dict]] = {}
 
@@ -143,6 +141,9 @@ def get_soup(component: cf.PCComponent) -> bs:
 def parse_info(
     subject: cf.PCComponent, soup: bs  # , translation: pipeline, question: pipeline
 ) -> dict:
+
+    if not models:
+        load_models()
 
     info: dict[str, str | dict] = {}
 

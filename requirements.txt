@@ -10,3 +10,5 @@ tokenizers==0.13.2
 transformers==4.25.1
 types-beautifulsoup4==4.11.6.1
 streamlit
+sentencepiece
+sacremoses
