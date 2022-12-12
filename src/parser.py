@@ -10,13 +10,9 @@ models: dict = {}
 
 def load_models():
     question_name = "deepset/roberta-base-squad2"
-    models["qa"] = pipeline(
-        "question-answering", model=question_name, tokenizer=question_name
-    )
+    models["qa"] = pipeline("question-answering", model=question_name, tokenizer=question_name)
     translation_name = "Helsinki-NLP/opus-mt-ru-en"
-    models["trans"] = pipeline(
-        "translation", model=translation_name, tokenizer=translation_name
-    )
+    models["trans"] = pipeline("translation", model=translation_name, tokenizer=translation_name)
     classifier_name = "joeddav/xlm-roberta-large-xnli"
     models["class"] = pipeline("zero-shot-classification", model=classifier_name)
 
@@ -66,9 +62,7 @@ def parse(to_file: str):
         soup = bs(r.text, "html.parser")
         num = pages_num(soup)
         for i in range(num):
-            r = rq.get(
-                url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
-            )
+            r = rq.get(url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list")
             url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
             soup = bs(r.text, "html.parser")
             vacancies_names = soup.find_all(
@@ -138,9 +132,7 @@ def get_soup(component: cf.PCComponent) -> bs:
     return soup
 
 
-def parse_info(
-    subject: cf.PCComponent, soup: bs  # , translation: pipeline, question: pipeline
-) -> dict:
+def parse_info(subject: cf.PCComponent, soup: bs) -> dict:  # , translation: pipeline, question: pipeline
 
     if not models:
         load_models()
@@ -158,22 +150,13 @@ def parse_info(
     specs = soup.find_all("div", class_="Specifications__row")
     out = ""
     for spec in specs:
-        name = (
-            spec.find(class_="Specifications__column Specifications__column_name")
-            .contents[0]
-            .text
-        )
-        value = spec.find(
-            class_="Specifications__column Specifications__column_value"
-        ).text
+        name = spec.find(class_="Specifications__column Specifications__column_name").contents[0].text
+        value = spec.find(class_="Specifications__column Specifications__column_value").text
         out += " ".join((name + value).split()) + ";\n"
 
     first = out[:512].rfind(" ")
     outp = [out[:first], out[first:]]
-    info[cf.ALL] = (
-        models["trans"](outp[0])[0]["translation_text"]
-        + models["trans"](outp[1])[0]["translation_text"]
-    )
+    info[cf.ALL] = models["trans"](outp[0])[0]["translation_text"] + models["trans"](outp[1])[0]["translation_text"]
     out = "".join(outp)
 
     qdic = parser_matrix_qa[subject.type]
