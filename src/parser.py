@@ -5,16 +5,20 @@ from bs4 import BeautifulSoup as bs
 import configuration as cf
 from transformers import pipeline
 
-question_name = "deepset/roberta-base-squad2"
-question_model = pipeline(
-    "question-answering", model=question_name, tokenizer=question_name
-)
+models: dict = {}
 
 
-translation_name = "Helsinki-NLP/opus-mt-ru-en"
-translation_model = pipeline(
-    "translation", model=translation_name, tokenizer=translation_name
-)
+def load_models():
+    question_name = "deepset/roberta-base-squad2"
+    models["qa"] = pipeline(
+        "question-answering", model=question_name, tokenizer=question_name
+    )
+    translation_name = "Helsinki-NLP/opus-mt-ru-en"
+    models["trans"] = pipeline(
+        "translation", model=translation_name, tokenizer=translation_name
+    )
+    models["class"] = classifier_name = "joeddav/xlm-roberta-large-xnli"
+    classifier = pipeline("zero-shot-classification", model=classifier_name)
 
 
 def pages_num(soup: bs) -> int:
@@ -27,14 +31,17 @@ def pages_num(soup: bs) -> int:
     return num
 
 
-def parce(to_file: str) -> None:
+def parse(to_file: str):
     try:
         f = open(to_file, "w")
     except IOError as e:
-        return None
+        return
 
-    classifier_name = "joeddav/xlm-roberta-large-xnli"
-    classifier = pipeline("zero-shot-classification", model=classifier_name)
+    if not models:
+        load_models()
+    else:
+        return
+
     data: dict[str, dict[str, dict]] = {}
 
     candidate_labels = [
@@ -58,25 +65,20 @@ def parce(to_file: str) -> None:
     for cmnt in matrix.keys():
         data[cmnt] = {}
         r = rq.get(url_template + matrix[cmnt], allow_redirects=True)
-        print(r.status_code, r.url)
         soup = bs(r.text, "html.parser")
         num = pages_num(soup)
-        for i in range(2):  # range(num):
+        for i in range(num):
             r = rq.get(
                 url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
             )
-            print(r.status_code)
-            print(r.url)
             url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
             soup = bs(r.text, "html.parser")
             vacancies_names = soup.find_all(
                 "a",
                 class_="ProductCardHorizontal__title Link js--Link Link_type_default",
             )
-            print("*" * 90)
-            i = 0
             for name in vacancies_names:
-                cl = classifier(name.text, candidate_labels)
+                cl = models["class"](name.text, candidate_labels)
                 dummy = cf.PCComponent(cmnt)
                 dummy.link = "https://www.citilink.ru" + name["href"]
                 info = parse_info(dummy, get_soup(dummy))
@@ -86,10 +88,6 @@ def parce(to_file: str) -> None:
                 }
                 for key in info:
                     data[cmnt][namee][key] = info[key]
-                i += 1
-                print(namee)
-                if i == 2:
-                    break
 
     dumped = json.dumps(data, ensure_ascii=False, indent=2)
     f.write(str(dumped))
@@ -133,7 +131,6 @@ def get_soup(component: cf.PCComponent) -> bs:
     soup = bs("")
     while not mb_price:
         r = rq.get(component.link + "properties/")
-        print(r.status_code)
         if r.status_code != 200:
             break
         soup = bs(r.text, "html.parser")
@@ -173,8 +170,8 @@ def parse_info(
     first = out[:512].rfind(" ")
     outp = [out[:first], out[first:]]
     info[cf.ALL] = (
-        translation_model(outp[0])[0]["translation_text"]
-        + translation_model(outp[1])[0]["translation_text"]
+        models["trans"](outp[0])[0]["translation_text"]
+        + models["trans"](outp[1])[0]["translation_text"]
     )
     out = "".join(outp)
 
@@ -183,19 +180,5 @@ def parse_info(
     for key in qdic.keys():
 
         qa_input = {"question": parser_matrix_qa[subject.type][key], "context": out}
-        info[cf.MAIN][key] = question_model(qa_input)["answer"]
+        info[cf.MAIN][key] = models["qa"](qa_input)["answer"]
     return info
-    # subject.is_set = True
-
-
-# r = requests.get("https://www.citilink.ru/catalog/materinskie-platy/")
-# print(r.status_code)
-# parce("info.json")
-
-# cmnt = cf.MB
-# dummy = cf.PCComponent(cmnt)
-# dummy.link = "https://www.citilink.ru/product/materinskaya-plata-asrock-h610m-hdv-m-2-soc-1700-intel-h610-2xddr4-atx-1680404/"
-# info = parse_info(dummy, get_soup(dummy))
-# import pprint
-# pp = pprint.PrettyPrinter(indent=4)
-# pp.pprint(info)

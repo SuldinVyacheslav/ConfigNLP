@@ -30,7 +30,7 @@ ALL: Final[str] = "all_info"
 
 
 class PCComponent:
-    def __init__(self, component_type: str) -> None:
+    def __init__(self, component_type: str):
         self.main_info: dict[str, str] = {}
         self.type = component_type
         self.name = ""
@@ -42,7 +42,7 @@ class PCComponent:
 
 
 class MotherBoard(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {
             CHIPSET: "",
@@ -55,7 +55,7 @@ class MotherBoard(PCComponent):
 
 
 class RAMemory(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {
             DDR: "",
@@ -66,25 +66,25 @@ class RAMemory(PCComponent):
 
 
 class VideoCard(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {DDR: "", INTAKE: "", SLOT: ""}
 
 
 class Procesor(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {CPU_SOCKET: "", FREQUENCY: "", HEAT_OUT: ""}
 
 
 class PowerBlock(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {CAPACITY: "", LENGTH: ""}
 
 
 class Body(PCComponent):
-    def __init__(self, base: str) -> None:
+    def __init__(self, base: str):
         super().__init__(base)
         self.main_info = {ATX: ""}
 
@@ -111,7 +111,7 @@ class Configuration:
             + self.powb.price
         )
 
-    def socket_check(self) -> None:
+    def socket_check(self):
         if (self.mob.is_set and self.cpu.is_set) and (
             not self.mob.main_info[SOCKET] == self.cpu.main_info[SOCKET]
         ):
@@ -122,7 +122,7 @@ class Configuration:
                 + self.cpu.main_info[SOCKET]
             )
 
-    def ram_check(self) -> None:
+    def ram_check(self):
         if self.ram.is_set and self.mob.is_set:
             if not self.mob.main_info[DDR][:4] == self.ram.main_info[DDR]:
                 self.problems.append(
@@ -139,7 +139,7 @@ class Configuration:
                     + self.ram.main_info[RAM_TYPE]
                 )
 
-    def pbwatt_check(self) -> None:
+    def pbwatt_check(self):
         if (self.powb.is_set and self.gpu.is_set) and (
             not int(self.powb.main_info[CAPACITY].split(" ")[0])
             > int(self.gpu.main_info[INTAKE].split(" ")[0])
@@ -151,7 +151,7 @@ class Configuration:
                 + self.gpu.main_info[INTAKE]
             )
 
-    def size_check(self) -> None:
+    def size_check(self):
         if (self.mob.is_set and self.body.is_set) and (
             not self.mob.main_info[ATX] == self.body.main_info[ATX]
         ):
@@ -162,7 +162,7 @@ class Configuration:
                 + self.body.main_info[ATX]
             )
 
-    def check_compatibility(self) -> None:
+    def check_compatibility(self):
         self.problems.clear()
         checks = [self.socket_check, self.ram_check, self.pbwatt_check, self.size_check]
 
