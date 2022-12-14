@@ -1,0 +1,51 @@
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@stable
+        with:
+          options: "--check --verbose -l 120"
+          src: "./src"
+          version: "~= 22.0"
+  mypy:
+    runs-on: ubuntu-latest
+    name: Mypy
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.9
+    - name: Install Dependencies
+      run: |
+        pip install mypy
+        python3 -m pip install types-requests==2.28.11
+    - name: mypy
+      run: |
+        mypy .
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 322
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install tensorflow
+          pip install sacremoses
+          pip install transformers[sentencepiece]
+      - name: Test with pytest
+        run: |
+          python -m pytest
