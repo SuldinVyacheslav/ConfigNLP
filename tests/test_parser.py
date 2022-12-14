@@ -32,21 +32,7 @@ test_html = {
     "Body": "samples/body.json",
 }
 
-question_name = "deepset/roberta-base-squad2"
-translation_name = "Helsinki-NLP/opus-mt-ru-en"
-models = {
-    "translation_model": pipeline(
-        "translation", model=translation_name, tokenizer=translation_name
-    ),
-    "q_a_model": pipeline(
-        "question-answering", model=question_name, tokenizer=question_name
-    ),
-}
-
-
-def test_first() -> None:
-    assert 1 == 1, "YES"
-
+parser = ps.Parser()
 
 def test_parser_motherboard() -> None:
     # assert 1 == 1, "EYA"
@@ -59,7 +45,7 @@ def test_parser_motherboard() -> None:
         cf.ATX: "mATX",
     }
     f = open(os.path.join(os.getcwd(), "tests/samples/mb.json"), "r")
-    info = ps.parse_info(cfg.mob, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.mob, bs(f.read(), "html.parser"))
     for key in right_parsed_mb:
         assert info[cf.MAIN][key] == right_parsed_mb[key]
 
@@ -71,7 +57,7 @@ def test_parser_cpu() -> None:
         cf.HEAT_OUT: "65 Вт",
     }
     f = open(os.path.join(os.getcwd(), "tests/samples/cpu.json"), "r")
-    info = ps.parse_info(cfg.cpu, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.cpu, bs(f.read(), "html.parser"))
     for key in right_parsed_cpu:
         assert info[cf.MAIN][key] == right_parsed_cpu[key]
 
@@ -84,7 +70,7 @@ def test_parser_ram() -> None:
         cf.RAM_TYPE: "DIMM",
     }
     f = open(os.path.join(os.getcwd(), "tests/samples/ram.json"), "r")
-    info = ps.parse_info(cfg.ram, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.ram, bs(f.read(), "html.parser"))
     for key in right_parsed:
         print(cfg.ram.main_info[key])
         assert info[cf.MAIN][key] == right_parsed[key]
@@ -93,7 +79,7 @@ def test_parser_ram() -> None:
 def test_parser_gpu() -> None:
     right_parsed = {cf.DDR: "GDDR6", cf.INTAKE: "500 Вт", cf.SLOT: "PCI-E 4.0"}
     f = open(os.path.join(os.getcwd(), "tests/samples/gpu.json"), "r")
-    info = ps.parse_info(cfg.gpu, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.gpu, bs(f.read(), "html.parser"))
     for key in right_parsed:
         print(cfg.gpu.main_info[key])
         assert info[cf.MAIN][key] == right_parsed[key]
@@ -102,7 +88,7 @@ def test_parser_gpu() -> None:
 def test_parser_pb() -> None:
     right_parsed = {cf.CAPACITY: "750 Вт", cf.LENGTH: "140"}
     f = open(os.path.join(os.getcwd(), "tests/samples/pb.json"), "r")
-    info = ps.parse_info(cfg.powb, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.powb, bs(f.read(), "html.parser"))
     for key in right_parsed:
         print(cfg.powb.main_info[key])
         assert info[cf.MAIN][key] == right_parsed[key]
@@ -111,7 +97,7 @@ def test_parser_pb() -> None:
 def test_parser_body() -> None:
     right_parsed = {cf.ATX: "miniITX"}
     f = open(os.path.join(os.getcwd(), "tests/samples/body.json"), "r")
-    info = ps.parse_info(cfg.body, bs(f.read(), "html.parser"))
+    info = parser.parse_info(cfg.body, bs(f.read(), "html.parser"))
     for key in right_parsed:
         print(cfg.body.main_info[key])
         assert info[cf.MAIN][key] == right_parsed[key]
