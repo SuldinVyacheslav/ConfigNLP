@@ -161,6 +161,9 @@ class Parser:
         qdic = self.parser_matrix_qa[subject.type]
         info[cf.MAIN] = {}
         for key in qdic.keys():
-            qa_input = {"question": self.parser_matrix_qa[subject.type][key], "context": out}
+            qa_input = {
+                "question": self.parser_matrix_qa[subject.type][key],
+                "context": out,
+            }
             info[cf.MAIN][key] = self.__models["qa"](qa_input)["answer"]
         return info
