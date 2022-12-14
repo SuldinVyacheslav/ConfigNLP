@@ -1,13 +1,10 @@
 import json
 import os
-import sys
 
 from pathlib import Path
 
 import streamlit as st
 
-if os.getcwd() not in sys.path:
-    sys.path.append(os.getcwd())
 
 import src.configuration as cf
 
@@ -82,9 +79,7 @@ def show_component(component: cf.PCComponent):
 
 def show_all():
     for config in st.session_state.configs:
-        mb, cpu, gpu, ram, powbl, bodu = st.tabs(
-            [cf.MB, cf.CPU, cf.GPU, cf.RAM, cf.PB, cf.BODY]
-        )
+        mb, cpu, gpu, ram, powbl, bodu = st.tabs([cf.MB, cf.CPU, cf.GPU, cf.RAM, cf.PB, cf.BODY])
         with mb:
             show_component(config.mob)
         with cpu:
@@ -113,9 +108,7 @@ def show_all():
 
 def add(component_type: str):
     if not len(st.session_state.configs):
-        st.warning(
-            "⚠️ So far, you have not created an assembly. You can do this using the button below"
-        )
+        st.warning("⚠️ So far, you have not created an assembly. You can do this using the button below")
         return
     cur = st.session_state.configs[0]
     call: dict[str, cf.PCComponent] = {
