@@ -29,6 +29,7 @@ test_html = {
 
 parser = ps.Parser()
 
+
 def test_parser_motherboard() -> None:
     # assert 1 == 1, "EYA"
     right_parsed_mb = {

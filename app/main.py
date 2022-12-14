@@ -6,8 +6,6 @@ from pathlib import Path
 
 import streamlit as st
 
-if os.getcwd() not in sys.path:
-    sys.path.append(os.getcwd())
 
 import src.configuration as cf
 
