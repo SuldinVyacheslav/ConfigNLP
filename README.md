@@ -32,7 +32,7 @@ and check if they match.
 
 Have fun!
 
-<h1 style="text-align: center;">Contibute</h1>  
+<h1 style="text-align: center;">Contribute</h1>  
 
 ```git clone https://github.com/SuldinVyacheslav/ConfigNLP.git```  
 ```python -m pip install --upgrade pip```  
