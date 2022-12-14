@@ -31,6 +31,7 @@ and check if they match.
 | And look at the **price** of the selected items!                                    | <img align="center" src="https://i.ibb.co/QnNXbV5/cost.png"  width="300">     |
 
 Have fun!
+ 
 
 <h1 style="text-align: center;">Contribute</h1>  
 
