@@ -6,7 +6,3 @@ transformers==4.25.1
 types-beautifulsoup4==4.11.6.1
 streamlit
 pathlib
-json
-os
-sys
-typing
