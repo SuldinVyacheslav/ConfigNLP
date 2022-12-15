@@ -1,12 +1,5 @@
 import os
 
-from transformers import pipeline
-
-# sys.path is a list of absolute path strings
-import sys
-from os.path import dirname, abspath
-
-sys.path.append(dirname(dirname(abspath(__file__))) + "/src")
 import src.parser as ps
 import src.configuration as cf
 

@@ -38,6 +38,26 @@ class Parser:
         cf.BODY: {cf.ATX: "Какой Форм-фактор?"},
     }
 
+    url = "https://www.citilink.ru/catalog/"
+
+    matrix_tags = {
+        cf.MB: "materinskie-platy/",
+        cf.CPU: "processory/",
+        cf.GPU: "videokarty/",
+        cf.RAM: "moduli-pamyati/",
+        cf.PB: "bloki-pitaniya/",
+        cf.BODY: "korpusa/",
+    }
+
+    candidate_labels = [
+        "Модуль памяти",
+        "Видеокарта",
+        "Процессор",
+        "Материнская плата",
+        "Блок питания",
+        "Корпус",
+    ]
+
     def __init__(self):
         self.load_models()
 
@@ -69,39 +89,21 @@ class Parser:
 
         data: dict[str, dict[str, dict]] = {}
 
-        candidate_labels = [
-            "Модуль памяти",
-            "Видеокарта",
-            "Процессор",
-            "Материнская плата",
-            "Блок питания",
-            "Корпус",
-        ]
-
-        url_template = "https://www.citilink.ru/catalog/"
-        matrix = {
-            cf.MB: "materinskie-platy/",
-            cf.CPU: "processory/",
-            cf.GPU: "videokarty/",
-            cf.RAM: "moduli-pamyati/",
-            cf.PB: "bloki-pitaniya/",
-            cf.BODY: "korpusa/",
-        }
-        for cmnt in matrix.keys():
+        for cmnt in self.matrix_tags.keys():
             data[cmnt] = {}
-            r = rq.get(url_template + matrix[cmnt], allow_redirects=True)
+            r = rq.get(self.url + self.matrix_tags[cmnt], allow_redirects=True)
             soup = bs(r.text, "html.parser")
             num = self.pages_num(soup)
             for i in range(num):
-                r = rq.get(url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list")
-                url_template + matrix[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
+                r = rq.get(self.url + self.matrix_tags[cmnt] + "?p=" + str(i + 1) + "&view_type=list")
+                self.url + self.matrix_tags[cmnt] + "?p=" + str(i + 1) + "&view_type=list"
                 soup = bs(r.text, "html.parser")
                 vacancies_names = soup.find_all(
                     "a",
                     class_="ProductCardHorizontal__title Link js--Link Link_type_default",
                 )
                 for name in vacancies_names:
-                    cl = self.__models["class"](name.text, candidate_labels)
+                    cl = self.__models["class"](name.text, self.candidate_labels)
                     dummy = cf.PCComponent(cmnt)
                     dummy.link = "https://www.citilink.ru" + name["href"]
                     info = self.parse_info(dummy, self.get_soup(dummy))
